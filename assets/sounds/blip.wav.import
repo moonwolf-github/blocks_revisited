@@ -2,17 +2,19 @@
 
 importer="wav"
 type="AudioStreamSample"
-valid=false
+path="res://.import/blip.wav-f04b54a539fcc90f6efead7606dd13d2.sample"
 
 [deps]
 
 source_file="res://assets/sounds/blip.wav"
+dest_files=[ "res://.import/blip.wav-f04b54a539fcc90f6efead7606dd13d2.sample" ]
+
 [params]
 
 force/8_bit=false
 force/mono=false
 force/max_rate=false
-force/max_rate_hz=44100
+force/max_rate_hz=96000.0
 edit/trim=true
 edit/normalize=true
 edit/loop=false
