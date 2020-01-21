@@ -1,8 +1,4 @@
-extends AudioStreamPlayer
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+extends RigidBody2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -12,7 +8,6 @@ func _ready():
 #func _process(delta):
 #    pass
 
-
 func _on_Enemy_body_entered(body):
-    if not body.is_in_group("player"):
-        play()
+    if body.is_in_group("player"):
+        queue_free()

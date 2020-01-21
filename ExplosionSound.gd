@@ -1,9 +1,5 @@
 extends AudioStreamPlayer
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
     pass # Replace with function body.
@@ -13,6 +9,6 @@ func _ready():
 #    pass
 
 
-func _on_Enemy_body_entered(body):
-    if not body.is_in_group("player"):
+func _on_Player1_body_entered(body):
+    if body.is_in_group("enemy"):
         play()

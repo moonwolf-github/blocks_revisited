@@ -14,4 +14,5 @@ func _ready():
 
 
 func _on_Player1_body_entered(body):
-    play()
+    if not body.is_in_group("enemy"):
+        play()
