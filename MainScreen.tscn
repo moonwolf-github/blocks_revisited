@@ -39,7 +39,6 @@ tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 
 [node name="Player1" type="RigidBody2D" parent="." groups=[
 "player",
 ]]
-editor/display_folded = true
 position = Vector2( 163.259, 663.038 )
 mode = 2
 physics_material_override = SubResource( 1 )
@@ -62,12 +61,6 @@ script = ExtResource( 9 )
 [node name="ExplosionSound" type="AudioStreamPlayer" parent="Player1"]
 stream = ExtResource( 10 )
 script = ExtResource( 11 )
-
-[node name="Label" type="Label" parent="."]
-margin_left = 299.0
-margin_top = 128.0
-margin_right = 710.0
-margin_bottom = 245.0
 [connection signal="swipe" from="." to="Player1" method="_on_MainScreen_swipe"]
 [connection signal="body_entered" from="Player1" to="Player1/ExplosionSound" method="_on_Player1_body_entered"]
 [connection signal="body_entered" from="Player1" to="Player1/BlipSound" method="_on_Player1_body_entered"]
