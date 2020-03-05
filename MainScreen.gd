@@ -4,6 +4,7 @@ signal swipe
 var swipe_start = null
 var minimum_drag = 10
 export (PackedScene) var Enemy
+export (PackedScene) var Explosion
 
 func _unhandled_input(event):
     if event.is_action_pressed("click"):
@@ -30,3 +31,11 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_Player1_body_entered(body):
+    if body.is_in_group("enemy"):
+        var explosion = Explosion.instance()
+        explosion.position = body.position
+        explosion.get_node("Animation").play("Blast")
+        add_child(explosion)
