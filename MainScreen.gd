@@ -5,12 +5,15 @@ var swipe_start = null
 var minimum_drag = 10
 export (PackedScene) var Enemy
 export (PackedScene) var Explosion
+var dragging = false
 
 func _unhandled_input(event):
-    if event.is_action_pressed("click"):
-        swipe_start = get_viewport().get_mouse_position()
-    if event.is_action_released("click"):
-        _calculate_swipe(get_viewport().get_mouse_position())
+    #$Label.text = event.get_class() + ": " + str(event.is_pressed())
+    if event is InputEventScreenTouch:
+        if event.is_pressed():
+            swipe_start = event.position
+        else:
+            _calculate_swipe(event.position)
         
 func _calculate_swipe(swipe_end):
     if swipe_start == null: 
@@ -27,6 +30,7 @@ func _ready():
     e1.position = Vector2(50, 50)
     add_child(e1)
     e1.apply_central_impulse(Vector2(150, 20))
+    print("gotowy")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
