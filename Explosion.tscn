@@ -20,7 +20,7 @@ tracks/0/keys = {
 }
 
 [node name="Explosion" type="Light2D"]
-scale = Vector2( 1e-05, 1e-05 )
+scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 1 )
 color = Color( 0.305882, 0.772549, 0.576471, 1 )
 script = ExtResource( 2 )
