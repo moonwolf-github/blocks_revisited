@@ -29,17 +29,15 @@ func _ready():
     var e1 = Enemy.instance()
     e1.position = Vector2(50, 50)
     add_child(e1)
-    e1.apply_central_impulse(Vector2(150, 20))
+    e1.acceleration = Vector2(150, 20)
     print("gotowy")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
 
-
-func _on_Player1_body_entered(body):
-    if body.is_in_group("enemy"):
-        var explosion = Explosion.instance()
-        explosion.position = body.position
-        explosion.get_node("Animation").play("Blast")
-        add_child(explosion)
+func _on_Player1_kill_enemy(body):
+    var explosion = Explosion.instance()
+    explosion.position = body.position
+    explosion.get_node("Animation").play("Blast")
+    add_child(explosion)

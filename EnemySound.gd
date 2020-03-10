@@ -16,3 +16,8 @@ func _ready():
 func _on_Enemy_body_entered(body):
     if not body.is_in_group("player"):
         play()
+
+
+func _on_Enemy_touch(body):
+    if not body.is_in_group("player"):
+        play()

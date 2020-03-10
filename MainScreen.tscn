@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://MainScreen.gd" type="Script" id=1]
 [ext_resource path="res://Enemy.tscn" type="PackedScene" id=2]
@@ -12,11 +12,7 @@
 [ext_resource path="res://assets/sounds/explosion.wav" type="AudioStream" id=10]
 [ext_resource path="res://ExplosionSound.gd" type="Script" id=11]
 
-[sub_resource type="PhysicsMaterial" id=1]
-friction = 0.0
-bounce = 1.0
-
-[sub_resource type="CapsuleShape2D" id=2]
+[sub_resource type="CapsuleShape2D" id=1]
 radius = 19.2801
 height = 12.3664
 
@@ -36,15 +32,10 @@ cell_size = Vector2( 27, 27 )
 format = 1
 tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 16, 0, 0, 17, 0, 0, 18, 0, 0, 19, 0, 0, 20, 0, 0, 21, 0, 0, 22, 0, 0, 23, 0, 0, 24, 0, 0, 25, 0, 0, 26, 0, 0, 27, 0, 0, 28, 0, 0, 29, 0, 0, 30, 0, 0, 31, 0, 0, 32, 0, 0, 33, 0, 0, 34, 0, 0, 35, 0, 0, 36, 0, 0, 37, 0, 0, 38, 0, 0, 39, 0, 0, 40, 0, 0, 41, 0, 0, 42, 0, 0, 43, 0, 0, 44, 0, 0, 45, 0, 0, 46, 0, 0, 47, 0, 0, 65536, 0, 0, 65559, 0, 0, 65583, 0, 0, 131072, 0, 0, 131095, 0, 0, 131119, 0, 0, 196608, 0, 0, 196631, 0, 0, 196655, 0, 0, 262144, 0, 0, 262167, 0, 0, 262191, 0, 0, 327680, 0, 0, 327703, 0, 0, 327727, 0, 0, 393216, 0, 0, 393239, 0, 0, 393263, 0, 0, 458752, 0, 0, 458775, 0, 0, 458799, 0, 0, 524288, 0, 0, 524311, 0, 0, 524335, 0, 0, 589824, 0, 0, 589847, 0, 0, 589871, 0, 0, 655360, 0, 0, 655383, 0, 0, 655407, 0, 0, 720896, 0, 0, 720919, 0, 0, 720943, 0, 0, 786432, 0, 0, 786455, 0, 0, 786479, 0, 0, 851968, 0, 0, 851991, 0, 0, 852015, 0, 0, 917504, 0, 0, 917527, 0, 0, 917551, 0, 0, 983040, 0, 0, 983063, 0, 0, 983087, 0, 0, 1048576, 0, 0, 1048599, 0, 0, 1048623, 0, 0, 1114112, 0, 0, 1114135, 0, 0, 1114159, 0, 0, 1179648, 0, 0, 1179671, 0, 0, 1179695, 0, 0, 1245184, 0, 0, 1245207, 0, 0, 1245231, 0, 0, 1310720, 0, 0, 1310743, 0, 0, 1310767, 0, 0, 1376256, 0, 0, 1376279, 0, 0, 1376303, 0, 0, 1441792, 0, 0, 1441815, 0, 0, 1441839, 0, 0, 1507328, 0, 0, 1507351, 0, 0, 1507375, 0, 0, 1572864, 0, 0, 1572887, 0, 0, 1572911, 0, 0, 1638400, 0, 0, 1638423, 0, 0, 1638447, 0, 0, 1703936, 0, 0, 1703937, 0, 0, 1703938, 0, 0, 1703939, 0, 0, 1703940, 0, 0, 1703941, 0, 0, 1703942, 0, 0, 1703943, 0, 0, 1703944, 0, 0, 1703945, 0, 0, 1703946, 0, 0, 1703947, 0, 0, 1703948, 0, 0, 1703949, 0, 0, 1703950, 0, 0, 1703951, 0, 0, 1703952, 0, 0, 1703953, 0, 0, 1703954, 0, 0, 1703955, 0, 0, 1703956, 0, 0, 1703957, 0, 0, 1703958, 0, 0, 1703959, 0, 0, 1703960, 0, 0, 1703961, 0, 0, 1703962, 0, 0, 1703963, 0, 0, 1703964, 0, 0, 1703965, 0, 0, 1703966, 0, 0, 1703967, 0, 0, 1703968, 0, 0, 1703969, 0, 0, 1703970, 0, 0, 1703971, 0, 0, 1703972, 0, 0, 1703973, 0, 0, 1703974, 0, 0, 1703975, 0, 0, 1703976, 0, 0, 1703977, 0, 0, 1703978, 0, 0, 1703979, 0, 0, 1703980, 0, 0, 1703981, 0, 0, 1703982, 0, 0, 1703983, 0, 0 )
 
-[node name="Player1" type="RigidBody2D" parent="." groups=[
+[node name="Player1" type="KinematicBody2D" parent="." groups=[
 "player",
 ]]
 position = Vector2( 163.259, 663.038 )
-mode = 2
-physics_material_override = SubResource( 1 )
-gravity_scale = 0.0
-contacts_reported = 1
-contact_monitor = true
 script = ExtResource( 6 )
 
 [node name="Sprite" type="Sprite" parent="Player1"]
@@ -52,7 +43,7 @@ texture = ExtResource( 7 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player1"]
 position = Vector2( 2.32132, 6.19025 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="BlipSound" type="AudioStreamPlayer" parent="Player1"]
 stream = ExtResource( 8 )
@@ -62,6 +53,6 @@ script = ExtResource( 9 )
 stream = ExtResource( 10 )
 script = ExtResource( 11 )
 [connection signal="swipe" from="." to="Player1" method="_on_MainScreen_swipe"]
-[connection signal="body_entered" from="Player1" to="Player1/ExplosionSound" method="_on_Player1_body_entered"]
-[connection signal="body_entered" from="Player1" to="Player1/BlipSound" method="_on_Player1_body_entered"]
-[connection signal="body_entered" from="Player1" to="." method="_on_Player1_body_entered"]
+[connection signal="kill_enemy" from="Player1" to="Player1/ExplosionSound" method="_on_Player1_kill_enemy"]
+[connection signal="kill_enemy" from="Player1" to="." method="_on_Player1_kill_enemy"]
+[connection signal="touch" from="Player1" to="Player1/BlipSound" method="_on_Player1_touch"]

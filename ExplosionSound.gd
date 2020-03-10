@@ -8,7 +8,6 @@ func _ready():
 #func _process(delta):
 #    pass
 
-
-func _on_Player1_body_entered(body):
+func _on_Player1_kill_enemy(body):
     if body.is_in_group("enemy"):
         play()

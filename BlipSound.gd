@@ -1,18 +1,12 @@
 extends AudioStreamPlayer
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-    pass # Replace with function body.
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#    pass
-
-
 func _on_Player1_body_entered(body):
+    print("weszedłem")
+    if not body.is_in_group("enemy"):
+        play()
+
+
+func _on_Player1_touch(body):
+    print("weszedłem")
     if not body.is_in_group("enemy"):
         play()
